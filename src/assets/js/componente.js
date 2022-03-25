@@ -78,12 +78,12 @@ ulFiltros.addEventListener('click',(e)=>{
         elemento.classList.remove('hidden');
         const completado=elemento.classList.contains('completed');
         switch(filtro){
-            case 'Pendiente':
+            case 'Pendientes':
                 if(completado){
                     elemento.classList.add('hidden');
                 }
                 break;
-            case 'Completado':
+            case 'Completados':
                 if(!completado){
                     elemento.classList.add('hidden');
                 }
