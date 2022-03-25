@@ -1,5 +1,10 @@
-import { saludar } from './assets/js/componente.js';
+
+import { Todo,TodoList } from './clases';
+import {crearTodoHtml} from './assets/js/componente';
 import './style.css';
 
-const nombre='Sergio';
-saludar(nombre+'!!!!!!!');
+export const todoList=new TodoList();
+todoList.cargarLocalStorage();
+todoList.todos.forEach(todo => {
+    crearTodoHtml(todo);
+});
